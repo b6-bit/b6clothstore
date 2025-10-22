@@ -17,7 +17,7 @@
     <style>
         body {
             background-color: #000;
-            color: #fff;
+            color: #d4af37;
             font-family: 'Roboto', sans-serif;
         }
 
@@ -29,33 +29,41 @@
         .navbar a,
         .navbar-brand,
         .navbar-nav .nav-link {
-            color: #fff !important;
+            color: #d4af37 !important;
+            font-weight: 500;
         }
 
         .navbar a:hover,
         .nav-link:hover {
-            color: #00ff99 !important;
+            color: #fff !important;
         }
 
-        .btn-success {
-            background-color: #00ff99;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'
+            xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23d4af37' stroke-width='2'
+            stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .btn-gold {
+            background-color: #d4af37;
             border: none;
             color: #000;
+            font-weight: 600;
         }
 
-        .btn-success:hover {
-            background-color: #00cc77;
+        .btn-gold:hover {
+            background-color: #b5942a;
             color: #000;
         }
 
         .card {
             background-color: #111;
-            color: #fff;
-            border: 1px solid #222;
+            color: #d4af37;
+            border: 1px solid #333;
         }
 
         .card a {
-            color: #00ff99;
+            color: #d4af37;
         }
 
         .card a:hover {
@@ -66,46 +74,51 @@
             filter: brightness(1);
         }
 
-        /* Footer */
         footer {
             background-color: #111;
-            color: #fff;
+            color: #d4af37;
         }
 
         footer a {
-            color: #00ff99;
+            color: #d4af37;
         }
 
         footer a:hover {
             color: #fff;
         }
 
-
         .carousel-item h1,
         .carousel-item h2,
         .carousel-item p {
-            color: #fff;
+            color: #d4af37;
         }
 
         .carousel-indicators li {
-            background-color: #00ff99;
+            background-color: #d4af37;
         }
 
-        .h1, .h2, .h3, h1, h2, h3 {
-            color: #fff;
+        .h1,
+        .h2,
+        .h3,
+        h1,
+        h2,
+        h3 {
+            color: #d4af37;
+        }
+
+        .border {
+            border-color: #d4af37 !important;
         }
     </style>
 </head>
 
 <body>
 
-
-
-
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand text-success logo h1 align-self-center" href="Store.html">
-                B6-Vintage Store
+            <a class="navbar-brand logo h1 align-self-center" href="Store.html">
+                <strong style="color:#d4af37;">B6-Vintage Store</strong>
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -114,7 +127,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+            <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
                 id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
@@ -126,10 +139,10 @@
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-cart-arrow-down text-light mr-1"></i>
+                        <i class="fa fa-fw fa-cart-arrow-down text-gold mr-1" style="color:#d4af37;"></i>
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-light mr-3"></i>
+                        <i class="fa fa-fw fa-user text-gold mr-3" style="color:#d4af37;"></i>
                     </a>
                 </div>
             </div>
@@ -142,37 +155,39 @@
             <div class="carousel-item active">
                 <div class="container text-center p-5">
                     <img class="img-fluid rounded" src="assets/img/B6.jpg" alt="B6">
-                    <h1 class="mt-4 text-success"><b>B6</b> Vintage Cloth Store</h1>
-                    <p>A great website for your clothes, shoes and glasses.</p>
+                    <h1 class="mt-4"><b style="color:#d4af37;">B6</b> Vintage Cloth Store</h1>
+                    <p style="color:#d4af37;">A great website for your clothes, shoes and accessories.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Categories Section -->
     <section class="container py-5 text-center">
         <h1 class="h1">Categories of The Month</h1>
-        <p>People's Most Bought Items Each Month.</p>
+        <p style="color:#d4af37;">People's Most Bought Items Each Month.</p>
         <div class="row">
             <div class="col-md-4 p-4">
                 <img src="assets/img/Polo.jpg" class="rounded-circle img-fluid border" alt="Shirt">
                 <h5 class="mt-4">Shirt</h5>
-                <a class="btn btn-success mt-2">Go Shop</a>
+                <a class="btn btn-gold mt-2" href="shirts.html">Go Shop</a>
             </div>
             <div class="col-md-4 p-4">
                 <img src="assets/img/woodland.jpg" class="rounded-circle img-fluid border" alt="Shoes">
                 <h5 class="mt-4">Shoes</h5>
-                <a class="btn btn-success mt-2">Go Shop</a>
+                <a class="btn btn-gold mt-2" href="shoes.html">Go Shop</a>
             </div>
             <div class="col-md-4 p-4">
                 <img src="assets/img/rayban.jpg" class="rounded-circle img-fluid border" alt="Accessories">
                 <h5 class="mt-4">Accessories</h5>
-                <a class="btn btn-success mt-2">Go Shop</a>
+                <a class="btn btn-gold mt-2" href="accessories.html">Go Shop</a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-center py-4">
-        <p>© 2025 B6-Vintage Cloth Store | Designed by <strong>B6Innovations</strong></p>
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>© 2025 <strong>B6-Vintage Cloth Store</strong> | Designed by <strong style="color:#b5942a;">B6Innovations</strong></p>
     </footer>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
