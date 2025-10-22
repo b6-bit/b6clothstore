@@ -12,7 +12,7 @@
     <style>
         body {
             background-color: #000;
-            color: #fff;
+            color: #d4af37;
             font-family: 'Roboto', sans-serif;
         }
 
@@ -21,32 +21,40 @@
         }
 
         .navbar a, .navbar-brand, .navbar-nav .nav-link {
-            color: #fff !important;
+            color: #d4af37 !important;
         }
 
         .navbar a:hover, .nav-link:hover {
-            color: #00ff99 !important;
+            color: #fff !important;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'
+            xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23d4af37' stroke-width='2'
+            stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
 
         h1, h2, h3, h4, h5, h6 {
-            color: #fff;
+            color: #d4af37;
         }
 
         p {
-            color: #ccc;
-            line-height: 1.6;
+            color: #c9b37a;
+            line-height: 1.7;
         }
 
-        .btn-success {
-            background-color: #00ff99;
+        .btn-gold {
+            background-color: #d4af37;
             border: none;
             color: #000;
+            font-weight: 600;
             transition: 0.3s;
         }
 
-        .btn-success:hover {
-            background-color: #00cc77;
+        .btn-gold:hover {
+            background-color: #b5942a;
             transform: scale(1.05);
+            color: #000;
         }
 
         img {
@@ -57,31 +65,41 @@
 
         img:hover {
             transform: scale(1.05);
-            filter: brightness(1.2) drop-shadow(0 0 10px #00ff99);
+            filter: brightness(1.2) drop-shadow(0 0 10px #d4af37);
         }
 
         footer {
             background-color: #111;
-            color: #fff;
+            color: #d4af37;
         }
 
         footer a {
-            color: #00ff99;
+            color: #d4af37;
         }
 
         footer a:hover {
             color: #fff;
         }
+
+        .border-gold {
+            border: 1px solid #d4af37;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
         <div class="container">
-            <a class="navbar-brand text-success" href="index.html">B6-Vintage Store</a>
-            <div class="collapse navbar-collapse">
+            <a class="navbar-brand" href="index.html" style="color:#d4af37;"><strong>B6-Vintage Store</strong></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -89,44 +107,49 @@
         </div>
     </nav>
 
+    <!-- About Section -->
     <section class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <img src="assets/img/B6.jpg" class="img-fluid mb-4" alt="About B6 Store">
+                <img src="assets/img/B6.jpg" class="img-fluid mb-4 border-gold" alt="About B6 Store">
             </div>
             <div class="col-lg-6">
-                <h1 class="text-success">About B6 Vintage Cloth Store</h1>
+                <h1>About <span style="color:#b5942a;">B6 Vintage Cloth Store</span></h1>
                 <p>
-                    Welcome to B6 Vintage Cloth Store! We specialize in providing the finest collection of clothes, shoes, 
-                    and accessories with a touch of vintage style. Our mission is to combine classic fashion with modern 
-                    trends, ensuring that each product is stylish, comfortable, and of the highest quality.
+                    Welcome to <strong>B6 Vintage Cloth Store</strong> — your destination for timeless fashion. We specialize 
+                    in high-quality clothes, shoes, and accessories that blend vintage elegance with modern design. 
+                    Every product we offer reflects passion, craftsmanship, and individuality.
                 </p>
                 <p>
-                    At B6, we believe in sustainability and timeless fashion. Each piece is carefully selected and crafted 
-                    to give you a unique shopping experience. From casual wear to formal outfits, our collection caters 
-                    to all your fashion needs.
+                    At B6, we believe in sustainability, style, and comfort. Each piece in our collection tells a story — 
+                    a fusion of past inspiration and present-day fashion, made for people who appreciate true vintage aesthetics.
                 </p>
-                <a href="shop.html" class="btn btn-success mt-3">Explore Shop</a>
+                <a href="shop.html" class="btn btn-gold mt-3">Explore Shop</a>
             </div>
         </div>
     </section>
 
+    <!-- Story Section -->
     <section class="container py-5 text-center">
-        <h2 class="text-success mb-4">Our Story</h2>
-        <p>
-            Founded in 2022, B6 Vintage Cloth Store started with the goal of bringing classic fashion to everyday life. 
-            Over the years, we’ve grown into a brand that values quality, style, and customer satisfaction above all. 
-            Our team is passionate about helping you look and feel your best, whether it’s a casual outing or a special occasion.
+        <h2>Our Story</h2>
+        <p class="mt-3">
+            Established in 2022, <strong>B6 Vintage Cloth Store</strong> began as a small vision — to revive 
+            classic fashion and make it accessible for all. Today, B6 stands as a brand that represents 
+            elegance, authenticity, and timeless appeal. Our team works with passion to help you 
+            express your style with confidence and grace.
         </p>
     </section>
 
-    <footer class="text-center py-4 bg-dark">
-        <p>© 2025 B6-Vintage Cloth Store | Designed by <strong>B6Innovations</strong></p>
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>© 2025 <strong>B6-Vintage Cloth Store</strong> | Designed by <strong style="color:#b5942a;">B6Innovations</strong></p>
     </footer>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
 
 
 
