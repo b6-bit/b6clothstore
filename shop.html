@@ -5,98 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B6 Vintage Cloth Store - Shop</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #000000, #1a1a1a);
+      background: radial-gradient(circle at top, #000000 60%, #1a1a1a 100%);
       color: #FFD700;
       font-family: 'Poppins', sans-serif;
       min-height: 100vh;
     }
 
     .navbar {
-      background-color: #111;
+      background-color: rgba(17, 17, 17, 0.9);
       border-bottom: 2px solid #FFD700;
+      backdrop-filter: blur(6px);
     }
 
     .navbar-brand, .nav-link {
       color: #FFD700 !important;
       font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     .navbar-brand:hover, .nav-link:hover {
       color: #fff !important;
     }
 
+    /* Search Bar */
     .search-bar {
-      text-align: center;
-      margin: 40px 0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0 30px;
     }
 
-    .search-bar input {
+    .search-container {
+      position: relative;
       width: 60%;
-      padding: 12px;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 12px 45px 12px 20px;
       border: 2px solid #FFD700;
-      border-radius: 8px;
+      border-radius: 50px;
       background-color: #000;
       color: #FFD700;
       font-size: 16px;
+      outline: none;
+      transition: 0.3s ease-in-out;
     }
 
-    .search-bar input::placeholder {
+    .search-container input:focus {
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    }
+
+    .search-container i {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
       color: #FFD700;
-      opacity: 0.7;
+      font-size: 20px;
+      cursor: pointer;
     }
 
     h1 {
       text-align: center;
       color: #FFD700;
-      margin-bottom: 30px;
-      text-shadow: 0 0 10px #FFD700;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #FFD700;
+      font-weight: 700;
+    }
+
+    .divider {
+      width: 80px;
+      height: 3px;
+      background: #FFD700;
+      margin: 0 auto 50px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #FFD700;
     }
 
     .category {
-      background-color: #111;
+      background: rgba(17, 17, 17, 0.9);
       border: 2px solid #FFD700;
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 30px;
       text-align: center;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+      backdrop-filter: blur(5px);
+      transition: all 0.4s ease-in-out;
     }
 
     .category:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      transform: translateY(-8px);
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+    }
+
+    .category h2 {
+      color: #FFD700;
+      margin-bottom: 20px;
+      font-weight: 600;
     }
 
     .subcategory {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     .subcategory-item {
-      background-color: #000;
+      background: linear-gradient(145deg, #111, #000);
       border: 1px solid #FFD700;
       border-radius: 8px;
       padding: 15px;
-      margin-bottom: 10px;
-      transition: 0.3s;
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
       cursor: pointer;
-    }
-
-    .subcategory-item a {
       color: #FFD700;
-      text-decoration: none;
-      display: block;
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
 
     .subcategory-item:hover {
-      background-color: #FFD700;
+      background: #FFD700;
       color: #000;
-      transform: translateY(-3px);
-    }
-
-    .subcategory-item:hover a {
-      color: #000;
+      transform: translateY(-4px);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
     }
 
     footer {
@@ -104,10 +139,11 @@
       color: #FFD700;
       text-align: center;
       padding: 15px;
-      margin-top: 50px;
+      margin-top: 60px;
       border-top: 2px solid #FFD700;
     }
   </style>
+  <script src="https://kit.fontawesome.com/a2e0d6a2d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -126,42 +162,47 @@
   </nav>
 
   <div class="search-bar">
-    <input type="text" placeholder="Search for items...">
+    <div class="search-container">
+      <input type="text" placeholder="Search for items...">
+      <i class="fas fa-search"></i>
+    </div>
   </div>
 
   <div class="container">
     <h1>Shop by Category</h1>
+    <div class="divider"></div>
     <div class="row g-5">
 
+      <!-- Shoes -->
       <div class="col-md-4">
         <div class="category">
           <h2>Shoes</h2>
           <div class="subcategory">
-            <div class="subcategory-item"><a href="nike.html">Nike</a></div>
-            <div class="subcategory-item"><a href="adidas.html">Adidas</a></div>
-            <div class="subcategory-item"><a href="puma.html">Puma</a></div>
+            <a href="nike.html" class="subcategory-item text-decoration-none d-block">Nike</a>
+            <a href="adidas.html" class="subcategory-item text-decoration-none d-block">Adidas</a>
+            <a href="puma.html" class="subcategory-item text-decoration-none d-block">Puma</a>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
+     <div class="col-md-4">
         <div class="category">
           <h2>Accessories</h2>
           <div class="subcategory">
-            <div class="subcategory-item"><a href="#">Watches</a></div>
-            <div class="subcategory-item"><a href="#">Belts</a></div>
-            <div class="subcategory-item"><a href="#">Bags</a></div>
+            <a href="watch.html" class="subcategory-item text-decoration-none d-block">Watch</a>
+            <a href="belt.html" class="subcategory-item text-decoration-none d-block">Belt</a>
+            <a href="sunglasses.html" class="subcategory-item text-decoration-none d-block">SunGlasses</a>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
+       <div class="col-md-4">
         <div class="category">
           <h2>Dress</h2>
           <div class="subcategory">
-            <div class="subcategory-item"><a href="#">Casual Wear</a></div>
-            <div class="subcategory-item"><a href="#">Formal Wear</a></div>
-            <div class="subcategory-item"><a href="#">Vintage Style</a></div>
+            <a href="casualwear.html" class="subcategory-item text-decoration-none d-block">Casual Wear</a>
+            <a href="formalwear.html" class="subcategory-item text-decoration-none d-block">Formal Wear</a>
+            <a href="vintagestyle.html" class="subcategory-item text-decoration-none d-block">Vintage Style</a>
           </div>
         </div>
       </div>
@@ -176,5 +217,6 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
