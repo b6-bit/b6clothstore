@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Collection - B6 Vintage Store</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #000, #1a1a1a);
+      color: #FFD700;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background-color: #111;
+      border-bottom: 2px solid #FFD700;
+    }
+
+    .navbar-brand, .nav-link {
+      color: #FFD700 !important;
+      font-weight: 600;
+    }
+
+    .navbar-brand:hover, .nav-link:hover {
+      color: #fff !important;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+      text-shadow: 0 0 10px #FFD700;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 12px;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      background-color: #000;
+      color: #FFD700;
+      font-size: 16px;
+    }
+
+    .product-card {
+      background-color: #111;
+      border: 2px solid #FFD700;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      color: #FFD700;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .btn-gold {
+      background-color: #FFD700;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-gold:hover {
+      background-color: #fff;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #111;
+      color: #FFD700;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #FFD700;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark shadow">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">B6 Vintage Store</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Nike</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Nike Collection</h1>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search Nike products...">
+    </div>
+
+    <div class="row g-4">
+      <!-- 9 Product placeholders -->
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="product1.jpg" alt="Product 1">
+          <h4>Nike Product 1</h4>
+          <button class="btn btn-gold mt-2">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="product2.jpg" alt="Product 2">
+          <h4>Nike Product 2</h4>
+          <button class="btn btn-gold mt-2">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="product3.jpg" alt="Product 3">
+          <h4>Nike Product 3</h4>
+          <button class="btn btn-gold mt-2">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="product4.jpg" alt="Product 4">
+          <h4>Nike Product 4</h4>
+          <button class="btn btn-gold mt-2">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="product5.jpg" alt="Product 5">
+          <h4>Nike Product 5</h4>
+          <button class="btn btn-gold mt-2">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="product6.jpg" alt="Product 6">
+          <h4>Nike Product 6</h4>
+          <button class="btn btn-gold mt-2">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="product7.jpg" alt="Product 7">
+          <h4>Nike Product 7</h4>
+          <button class="btn btn-gold mt-2">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="product8.jpg" alt="Product 8">
+          <h4>Nike Product 8</h4>
+          <button class="btn btn-gold mt-2">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="product9.jpg" alt="Product 9">
+          <h4>Nike Product 9</h4>
+          <button class="btn btn-gold mt-2">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 B6 Vintage Cloth Store | Designed by <strong>B6Innovations</strong></p>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
