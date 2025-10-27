@@ -83,10 +83,20 @@
       cursor: pointer;
     }
 
+    .subcategory-item a {
+      color: #FFD700;
+      text-decoration: none;
+      display: block;
+    }
+
     .subcategory-item:hover {
       background-color: #FFD700;
       color: #000;
       transform: translateY(-3px);
+    }
+
+    .subcategory-item:hover a {
+      color: #000;
     }
 
     footer {
@@ -100,7 +110,6 @@
   </style>
 </head>
 <body>
-
 
   <nav class="navbar navbar-expand-lg navbar-dark shadow">
     <div class="container">
@@ -116,55 +125,49 @@
     </div>
   </nav>
 
-
   <div class="search-bar">
     <input type="text" placeholder="Search for items...">
   </div>
-
 
   <div class="container">
     <h1>Shop by Category</h1>
     <div class="row g-5">
 
-
       <div class="col-md-4">
         <div class="category">
           <h2>Shoes</h2>
           <div class="subcategory">
-            <div class="subcategory-item">Nike</div>
-            <div class="subcategory-item">Adidas</div>
-            <div class="subcategory-item">Puma</div>
+            <div class="subcategory-item"><a href="nike.html">Nike</a></div>
+            <div class="subcategory-item"><a href="adidas.html">Adidas</a></div>
+            <div class="subcategory-item"><a href="puma.html">Puma</a></div>
           </div>
         </div>
       </div>
-
 
       <div class="col-md-4">
         <div class="category">
           <h2>Accessories</h2>
           <div class="subcategory">
-            <div class="subcategory-item">Watches</div>
-            <div class="subcategory-item">Belts</div>
-            <div class="subcategory-item">Bags</div>
+            <div class="subcategory-item"><a href="#">Watches</a></div>
+            <div class="subcategory-item"><a href="#">Belts</a></div>
+            <div class="subcategory-item"><a href="#">Bags</a></div>
           </div>
         </div>
       </div>
 
- 
       <div class="col-md-4">
         <div class="category">
           <h2>Dress</h2>
           <div class="subcategory">
-            <div class="subcategory-item">Casual Wear</div>
-            <div class="subcategory-item">Formal Wear</div>
-            <div class="subcategory-item">Vintage Style</div>
+            <div class="subcategory-item"><a href="#">Casual Wear</a></div>
+            <div class="subcategory-item"><a href="#">Formal Wear</a></div>
+            <div class="subcategory-item"><a href="#">Vintage Style</a></div>
           </div>
         </div>
       </div>
 
     </div>
   </div>
-
 
   <footer>
     <p>© 2025 B6 Vintage Cloth Store | Designed by <strong>B6Innovations</strong></p>
@@ -173,3 +176,5 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
