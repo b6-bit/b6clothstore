@@ -3,100 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop - B6 Vintage Cloth Store</title>
+  <title>B6 Vintage Cloth Store - Shop</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <style>
     body {
-      background-color: #000;
+      background: linear-gradient(135deg, #000000, #1a1a1a);
       color: #FFD700;
-      font-family: 'Roboto', sans-serif;
-      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
     }
 
-    .navbar, footer {
+    .navbar {
       background-color: #111;
+      border-bottom: 2px solid #FFD700;
     }
 
-    .navbar a, .navbar-brand {
+    .navbar-brand, .nav-link {
       color: #FFD700 !important;
+      font-weight: 600;
     }
 
-    .navbar a:hover {
+    .navbar-brand:hover, .nav-link:hover {
       color: #fff !important;
     }
 
-    h1 {
-      margin-top: 50px;
-      color: #FFD700;
-      text-shadow: 0 0 12px #FFD700;
-      font-weight: bold;
+    .search-bar {
+      text-align: center;
+      margin: 40px 0 20px;
     }
 
-    .category-card {
+    .search-bar input {
+      width: 60%;
+      padding: 12px;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      background-color: #000;
+      color: #FFD700;
+      font-size: 16px;
+    }
+
+    .search-bar input::placeholder {
+      color: #FFD700;
+      opacity: 0.7;
+    }
+
+    h1 {
+      text-align: center;
+      color: #FFD700;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #FFD700;
+    }
+
+    .category {
       background-color: #111;
       border: 2px solid #FFD700;
       border-radius: 16px;
-      color: #FFD700;
-      transition: all 0.4s ease;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+      padding: 30px;
       text-align: center;
-      padding: 30px 20px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+      transition: all 0.3s ease-in-out;
     }
 
-    .category-card:hover {
+    .category:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 35px rgba(255, 215, 0, 0.6);
-      background-color: #222;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
     }
 
-    .category-card img {
-      border-radius: 12px;
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      margin-bottom: 20px;
-      transition: 0.4s;
+    .subcategory {
+      margin-top: 20px;
     }
 
-    .category-card img:hover {
-      filter: brightness(1.3);
+    .subcategory-item {
+      background-color: #000;
+      border: 1px solid #FFD700;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+      transition: 0.3s;
+      cursor: pointer;
     }
 
-    .category-card h3 {
-      font-weight: bold;
-      text-shadow: 0 0 8px #FFD700;
+    .subcategory-item:hover {
+      background-color: #FFD700;
+      color: #000;
+      transform: translateY(-3px);
     }
 
     footer {
+      background-color: #111;
       color: #FFD700;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    .btn-gold {
-      background-color: #FFD700;
-      color: #000;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 20px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .btn-gold:hover {
-      background-color: #fff;
-      color: #000;
+      padding: 15px;
+      margin-top: 50px;
+      border-top: 2px solid #FFD700;
     }
   </style>
 </head>
 <body>
 
+
   <nav class="navbar navbar-expand-lg navbar-dark shadow">
     <div class="container">
-      <a class="navbar-brand" href="index.html">B6 Vintage Store</a>
+      <a class="navbar-brand" href="#">B6 Vintage Store</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link active" href="#">Shop</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -106,40 +117,53 @@
   </nav>
 
 
-  <section class="container py-5">
-    <h1 class="mb-5">Explore Our Categories</h1>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for items...">
+  </div>
+
+
+  <div class="container">
+    <h1>Shop by Category</h1>
     <div class="row g-5">
 
-  
+
       <div class="col-md-4">
-        <div class="category-card">
-          <img src="casio g-shock gravity master mens watch.jpg" alt="Glasses Category">
-          <h3>Watch</h3>
-          <p>Discover premium sunglasses and frames crafted for timeless style.</p>
-          <a href="glasses.html" class="btn btn-gold mt-3">View Collection</a>
+        <div class="category">
+          <h2>Shoes</h2>
+          <div class="subcategory">
+            <div class="subcategory-item">Nike</div>
+            <div class="subcategory-item">Adidas</div>
+            <div class="subcategory-item">Puma</div>
+          </div>
         </div>
       </div>
 
+
       <div class="col-md-4">
-        <div class="category-card">
-          <img src="download.jpg" alt="Outfits Category">
-          <h3>Outfits</h3>
-          <p>From streetwear to luxury classics, shop the best outfit styles.</p>
-          <a href="outfits.html" class="btn btn-gold mt-3">View Collection</a>
+        <div class="category">
+          <h2>Accessories</h2>
+          <div class="subcategory">
+            <div class="subcategory-item">Watches</div>
+            <div class="subcategory-item">Belts</div>
+            <div class="subcategory-item">Bags</div>
+          </div>
         </div>
       </div>
 
+ 
       <div class="col-md-4">
-        <div class="category-card">
-          <img src="adidas egygpt blue.jpg" alt="Shoes Category">
-          <h3>Shoes</h3>
-          <p>Step into fashion with exclusive sneakers, boots, and vintage designs.</p>
-          <a href="shoes.html" class="btn btn-gold mt-3">View Collection</a>
+        <div class="category">
+          <h2>Dress</h2>
+          <div class="subcategory">
+            <div class="subcategory-item">Casual Wear</div>
+            <div class="subcategory-item">Formal Wear</div>
+            <div class="subcategory-item">Vintage Style</div>
+          </div>
         </div>
       </div>
 
     </div>
-  </section>
+  </div>
 
 
   <footer>
@@ -149,6 +173,3 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
